@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>nov - DSL for scraping the web</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #dc878a, #995f61);
+        }
+        .nov-logo {
+            transition: transform .3s;
+        }
+
+        .nov-logo:hover {
+            transform: scale(1.2);
+        }
+
+        button {
+            transition: background-color .2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-full flex items-center justify-center h-screen">
+        <div class="hero flex items-center flex-col justify-center">
+            <img class="nov-logo w-48 md:w-64" src='img/logo.png'>
+            <h2 class="text-5xl text-white">nov</h2>
+            <p class="text-xs text-gray-200">(fox in swedish)</p>
+            <p class="mt-2 text-sm w-3/4 md:text-xl font-light text-gray-100 text-center">
+                Simple and fast to learn <strong>Domain Specific Language</strong> for scraping the web!
+            </p>
+            <div class="buttons mt-8">
+
+                <a class="bg-gray-600 hover:bg-gray-500 py-2 px-4 md:px-8 rounded text-white" href="https://github.com/maciejoliwa/nov/" target="_blank">GitHub</a>
+                <button onclick="alert('does not work yet lmao')" class="bg-blue-600 hover:bg-blue-500 py-2 px-4 md:px-8 rounded text-white">Getting Started</button>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
