@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>nov - DSL for scraping the web</title>
     <style>
         body {
             background: linear-gradient(to bottom right, #dc878a, #995f61);
         }
+
+        * {
+            font-family: 'Darker Grotesque', sans-serif;
+        }
+
         .nov-logo {
             transition: transform .3s;
         }
 
         .nov-logo:hover {
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
 
         button {
@@ -27,15 +35,15 @@
     <div class="container-full flex items-center justify-center h-screen">
         <div class="hero flex items-center flex-col justify-center">
             <img class="nov-logo w-48 md:w-64" src='img/logo.png'>
-            <h2 class="text-5xl text-white">nov</h2>
-            <p class="text-xs text-gray-200">(fox in swedish)</p>
-            <p class="mt-2 text-sm w-3/4 md:text-xl font-light text-gray-100 text-center">
+            <h2 class="text-5xl font-bold mt-4 text-white xl:text-6xl">nov</h2>
+            <p class="text-xs text-gray-200 xl:text-sm">(fox in swedish)</p>
+            <p class="mt-2 text-sm w-3/4 md:text-xl font-light xl:text-4xl text-gray-100 text-center">
                 Simple and fast to learn <strong>Domain Specific Language</strong> for scraping the web!
             </p>
             <div class="buttons mt-8">
 
-                <a class="bg-gray-600 hover:bg-gray-500 py-2 px-4 md:px-8 rounded text-white" href="https://github.com/maciejoliwa/nov/" target="_blank">GitHub</a>
-                <a href='./getting-started.html' class="bg-blue-600 hover:bg-blue-500 py-2 px-4 md:px-8 rounded text-white">Getting Started</a>
+                <a class="bg-gray-600 hover:bg-gray-500 py-2 px-4 md:px-8 text-xl rounded text-white" href="https://github.com/maciejoliwa/nov/" target="_blank">GitHub</a>
+                <a href='./getting-started.html' class="bg-blue-600 hover:bg-blue-500 py-2 text-xl px-4 md:px-8 rounded text-white">Getting Started</a>
 
             </div>
         </div>
