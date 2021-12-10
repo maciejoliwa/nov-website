@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>nov - Getting Started</title>
+</head>
+
+<body class="px-2">
+    <h1 class="text-3xl font-bold" id="getting-started">Getting started</h1>
+    <h2 class="text-xl" id="a-quick-faq-about-the-language-">A quick FAQ about the language:</h2>
+    <h3 class="text-md font-bold mt-2" id="why-would-you-use-this-language-instead-of-python-with-bs4-">Why would you
+        use this language instead of
+        Python with BS4?</h3>
+    <p>No idea honestly, nov&#39;s interpreter is written in Python and uses BS4 so it just abstracts
+        certain operation and makes some quality of life improvements.</p>
+    <h3 class="text-md font-bold mt-2" id="can-i-write-a-web-framework-in-nov-">Can I write a web framework in nov?</h3>
+    <p>No, please stop.</p>
+    <h3 class="text-md font-bold mt-2" id="are-you-swedish-">Are you swedish?</h3>
+    <p>No.</p>
+    <h3 class="text-md font-bold mt-2" id="why-a-fox-">Why a fox?</h3>
+    <p>I like foxes. Foxes are cool.</p>
+    <h3 class="text-md font-bold mt-2" id="is-nov-turing-complete-">Is nov turing complete?</h3>
+    <p>No, and I really doubt it will ever be. It&#39;s a DSL after all.</p>
+    <h3 class="text-md font-bold mt-2" id="why-is-the-logo-just-a-rotated-square-with-one-part-missing-">Why is the logo
+        just a rotated square with one
+        part missing?</h3>
+    <p>I&#39;m not a graphic designer, so it is how it is (but look how cute it is tho).</p>
+    <h3 class="text-md font-bold mt-2" id="when-riir-">When RIIR?</h3>
+    <p>Maybe in the future, if there&#39;s a need for speed or safety in nov, after all it&#39;s a fairly simple DSL.
+        I really like Rust and I always wanted to properly learn it, so maybe rewriting a Parser might be
+        a good project?</p>
+    <h2 class="mt-8 text-2xl font-bold" id="hello-world">Hello World</h2>
+    <p>A simple hello world program consits of <strong>show</strong> function</p>
+    <pre class="p-2 bg-gray-200"><code class="lang-javascript"><span class="hljs-keyword">show</span> <span class="hljs-string">"Hello World!"</span>
+</code></pre>
+    <p>That&#39;s it, now run it:
+        <code>python3 nov.py file.nov</code>
+    </p>
+    <h2 class="mt-6 text-2xl font-bold" id="variables">Variables</h2>
+    <pre class="p-2 bg-gray-200"><code  class="lang-javascript"><span class="hljs-built_in">name</span> = <span class="hljs-string">"Avery"</span>
+age = <span class="hljs-number">19</span>
+
+<span class="hljs-comment">// plz i'm looking for a job</span>
+<span class="hljs-built_in">position</span> = <span class="hljs-string">"Unemployeed"</span>
+birth_year = <span class="hljs-number">2021</span> - age
+</code></pre>
+    <h2 class="mt-6 text-2xl font-bold" id="if-statements">If statements</h2>
+    <p>Ifs can only be done inline (for now)</p>
+    <pre class="p-2 bg-gray-200"><code class="lang-javascript"><span class="hljs-attr">age</span> = <span class="hljs-number">19</span>
+<span class="hljs-attr">naughty_things</span> = <span class="hljs-string">"no idea"</span>
+
+show naughty_things <span class="hljs-keyword">if</span> age &gt;= <span class="hljs-number">18</span>
+</code></pre>
+    <h2 class="mt-6 text-2xl font-bold" id="functions">Functions</h2>
+    <p>Take note that <strong>for now</strong> function arguments are not supported!</p>
+    <pre class="p-2 bg-gray-200"><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span></span> say_hello <span class="hljs-keyword">do</span>
+    show <span class="hljs-string">"Hello!"</span>
+<span class="hljs-keyword">end</span>
+
+say_hello
+</code></pre>
+    <h2 class="mt-6 text-2xl font-bold" id="scraping">Scraping</h2>
+    <pre class="p-2 bg-gray-200"><code class="lang-javascript"><span class="hljs-string">URL </span>= <span class="hljs-string">"https://&lt;some-website&gt;.com"</span>
+<span class="hljs-string">scrapped_website </span>= <span class="hljs-string">scrap </span><span class="hljs-string">URL
+</span>
+<span class="hljs-string">p_elements </span>= <span class="hljs-built_in">get-all-html</span> <span class="hljs-string">scrapped_website </span><span class="hljs-string">"p"</span>
+<span class="hljs-string">img_elements </span>= <span class="hljs-built_in">get-all-html</span> <span class="hljs-string">scrapped_website </span><span class="hljs-string">"img"</span>
+
+<span class="hljs-string">show </span><span class="hljs-string">p_elements
+</span><span class="hljs-string">show </span><span class="hljs-string">img_elements</span>
+</code></pre>
+    <h2 class="mt-6 text-2xl font-bold" id="saving-to-a-file">Saving to a file</h2>
+    <p>You can save anything into a file, scrapped data, strings, numbers, you name it.</p>
+    <pre class="p-2 bg-gray-200"><code class="lang-javascript"><span class="hljs-string">"hello"</span> <span class="hljs-string">|&gt; "</span>hello.txt<span class="hljs-string">"</span>
+
+URL = <span class="hljs-string">"https://&lt;some-website&gt;.com"</span>
+scrapped_website = scrap URL
+
+scrapped_website <span class="hljs-string">|&gt; "</span>index.html<span class="hljs-string">"</span>
+</code></pre>
+    <h2 class="mt-6 text-2xl font-bold" id="loops">Loops</h2>
+    <p>Loops are like 10% implemented, but you can use <strong>repeat</strong> like so:</p>
+    <pre class="p-2 bg-gray-200"><code class="lang-javascript">// this will <span class="hljs-keyword">show</span> <span class="hljs-string">"hello!"</span> <span class="hljs-number">100</span> times
+<span class="hljs-keyword">repeat</span> <span class="hljs-number">100</span> <span class="hljs-keyword">show</span> <span class="hljs-string">"hello!"</span>
+</code></pre>
+
+</body>
+
+</html>
